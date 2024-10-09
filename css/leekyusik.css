@@ -128,3 +128,158 @@
     url(../fonts/TuesdayNight-Regular.otf) format('opentype'),
     url(../fonts/TuesdayNight-Regular.woff) format('woff');
 }
+
+/* style */
+/* common */
+html{
+    font-size: 62.5%;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+body{
+    font-family: 'NotoKR';
+    font-size: 1.6rem;
+    font-weight: 400;
+    background-color: #141414;
+    color: #fff;
+}
+
+/* header */
+.header{
+    width: 155rem;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: clamp(4.7rem, 2.60vw, 5.3rem);
+}
+.logo-wrap{
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.7rem, 0.52vw, 1.3rem);
+}
+.logo-wrap .logo{
+    display: flex;
+    align-items: center;
+    gap: clamp(0.7rem, 0.52vw, 1.3rem);
+}
+.logo-wrap .logo img{
+    width: clamp(6.7rem, 3.65vw, 7.3rem);
+}
+.logo-wrap .logo span{
+    font-family: 'bookAntiqua';
+    font-style: italic;
+    font-size: clamp(3.7rem, 2.08vw, 4.3rem);
+}
+.logo-wrap > span{
+    font-size: clamp(1.7rem, 1.04vw, 2.3rem);
+    color: #5e5e5e;
+}
+.h-right{
+    padding: clamp(0.7rem, 0.52vw, 1.3rem) clamp(3.8rem, 2.08vw, 4.2rem);
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+/* main */
+.main-wrap{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(14.7rem, 7.81vw, 15.3rem);
+}
+/* main visual */
+.main-visual-wrap{
+    width: 100%;
+    height: 100vh;
+    padding-top: clamp(14.7rem, 7.81vw, 15.3rem);
+    overflow: hidden;
+    background: url(../images/main-bg.jpg) center/cover no-repeat;
+    box-sizing: border-box;
+}
+.motto-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(2.7rem, 1.56vw, 3.3rem);
+}
+.motto-wrap img{
+    width: clamp(39.7rem, 20.83vw, 40.3rem);
+}
+.motto-item{
+    display: flex;
+    flex-direction: column;
+}
+.motto-item span{
+    font-family: 'baskervilleOldFace';
+    font-size: clamp(12.7rem, 6.77vw, 13.3rem);
+}
+.motto-item span.point{
+    position: relative;
+}
+.motto-item span.point::after{
+    content: 'leekyusik';
+    position: absolute;
+    top: 40%;
+    left: 70%;
+    transform: rotate(-15deg);
+    font-family: 'tuesdayNight';
+    font-size: clamp(4.7rem, 2.60vw, 5.3rem);
+    color: #ab48ff;
+}
+.motto-item span strong{
+    font-family: 'bookAntiqua';
+    font-style: italic;
+    font-weight: 900;
+    color: #9bff00;
+}
+.motto-item.left{
+    align-items: flex-end;
+}
+
+/* greetings */
+.greetings{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(4.7rem, 2.60vw, 5.3rem);
+    margin: 0 auto;
+}
+.greet-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(1.7rem, 1.04vw, 2.3rem);
+}
+.greet-top img{
+    width: 6rem;
+}
+.greet-top .title{
+    font-size: 60px;
+    font-weight: 400;
+}
+.greet-top span{
+    color: #5e5e5e;
+}
+.greet-middle p{
+    text-align: center;
+    font-size: 18px;
+}
+.greet-bottom .signature{
+    font-family: 'tuesdayNight';
+    font-size: 80px;
+    color: #959595;
+}
