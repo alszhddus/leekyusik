@@ -164,6 +164,7 @@ body{
     justify-content: space-between;
     align-items: center;
     padding-top: clamp(4.7rem, 2.60vw, 5.3rem);
+    z-index: 5;
 }
 .logo-wrap{
     display: flex;
@@ -282,4 +283,86 @@ body{
     font-family: 'tuesdayNight';
     font-size: 80px;
     color: #959595;
+}
+
+/* my career */
+.my-career-wrap{
+    width: 100%;
+    height: 743px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.inner{
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 auto;
+}
+.inner .title{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 8rem;
+    font-family: 'baskervilleOldFace';
+    line-height: 100%;
+}
+.inner .title span:first-child{
+    position: relative;
+    display: inline-block;
+}
+.inner .title span:first-child::before{
+    content: '';
+    position: absolute;
+    left: 26rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: #9bff00;
+    z-index: -1;
+}
+.career-items{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.career-item{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 2.2rem;
+    font-weight: 200;
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed #575757;
+}
+.career-item:last-child{
+    border-bottom: none;
+}
+.career-item::before{
+    content: url(../images/dot.svg);
+    display: inline-block;
+    width: 2rem;
+}
+.bg-wrap{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bg-right{
+    display: flex;
+}
+.bg-con .bg-item{
+    position: relative;
+}
+.bg-item .txt{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
