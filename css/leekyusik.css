@@ -539,7 +539,7 @@ body{
     .motto-item span.point::after{font-size: 1.2rem;}
     .desc-items{left: 50%;transform: translateX(-50%);padding: 1rem 2rem;background-color: rgba(255, 255, 255, 0.2);border-radius: 100px;}
     .desc-item{white-space: nowrap;}
-    .greetings{width: 85%;gap: 30px;}
+    .greetings{width: 85%;min-height: 90vh;gap: 30px;}
     .greet-bottom .signature{font-size: 4rem;}
     .inner{width: 85%;}
     .inner .title span:first-child::before{left: auto;right: 0;}
