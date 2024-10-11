@@ -524,7 +524,7 @@ body{
     .logo{gap: 0.2rem !important;}
     .logo img{width: 30px !important;}
     .logo span{font-size: 25px !important;}
-    .main-visual-wrap{max-height: 580px;}
+    .main-visual-wrap{max-height: 100vh;padding-top: 150px;}
     .bg-con{display: none;}
     .h-right{display: none;}
     .logo-wrap > span{color: #fff;padding: 0.2rem 1rem;border-radius: 0.5rem;border: 1px solid #fff;font-size: 1.2rem;}
@@ -544,7 +544,8 @@ body{
     .inner{width: 85%;}
     .inner .title span:first-child::before{left: auto;right: 0;}
     .copyright{margin: 10rem 0 20rem 0;}
-    .my-career-wrap{height: 100vh;}
+    .my-career-wrap{height: 50vh;align-items: center;}
+    .bg-wrap{height: 100%;}
     .inner .title{font-size: 5rem;}
     
 }
