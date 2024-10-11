@@ -129,6 +129,32 @@
     url(../fonts/TuesdayNight-Regular.woff) format('woff');
 }
 
+/* Material Icons */
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/Material-Icons.eot'); /* For IE6-8 */
+    src: local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url('../fonts/Material-Icons.woff2') format('woff2'),
+      url('../fonts/Material-Icons.woff') format('woff'),
+      url('../fonts/Material-Icons.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Material Icons Outlined';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/MaterialIconsOutlined.otf') format('opentype');
+  }
+  
+  .material-icons, .material-icons-outlined {font-family: 'Material Icons';font-weight: normal;font-style: normal;  display: inline-block;line-height: 1;text-transform: none;letter-spacing: normal; word-wrap: normal; white-space: nowrap;direction: ltr;-webkit-font-smoothing: antialiased;text-rendering: optimizeLegibility; -moz-osx-font-smoothing: grayscale;font-feature-settings: 'liga';line-height: 1;vertical-align: top; font-size: inherit;}
+  
+  span[class*="material-"] {
+      font-family: 'Material Icons','Material Icons Outlined' !important;
+  }
+
 /* style */
 /* common */
 html{
@@ -155,7 +181,8 @@ body{
 
 /* header */
 .header{
-    width: 155rem;
+    width: 100%;
+    max-width: 155rem;
     position: fixed;
     top: 0;
     left: 50%;
@@ -203,8 +230,10 @@ body{
 }
 /* main visual */
 .main-visual-wrap{
+    position: relative;
     width: 100%;
     height: 100vh;
+    max-height: 963px;
     padding-top: clamp(14.7rem, 7.81vw, 15.3rem);
     overflow: hidden;
     background: url(../images/main-bg.jpg) center/cover no-repeat;
@@ -217,7 +246,9 @@ body{
     gap: clamp(2.7rem, 1.56vw, 3.3rem);
 }
 .motto-wrap img{
+    position: relative;
     width: clamp(39.7rem, 20.83vw, 40.3rem);
+    z-index: 9;
 }
 .motto-item{
     display: flex;
@@ -249,6 +280,15 @@ body{
 .motto-item.left{
     align-items: flex-end;
 }
+.desc-items{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    position: absolute;
+    bottom: 7rem;
+    left: 18rem;
+    z-index: 9;
+}
 
 /* greetings */
 .greetings{
@@ -269,26 +309,27 @@ body{
     width: 6rem;
 }
 .greet-top .title{
-    font-size: 60px;
+    font-size: clamp(5.7rem, 3.13vw, 6.3rem);
     font-weight: 400;
+    text-align: center;
 }
 .greet-top span{
     color: #5e5e5e;
 }
 .greet-middle p{
     text-align: center;
-    font-size: 18px;
+    font-size: clamp(1.5rem, 0.94vw, 2.1rem);
 }
 .greet-bottom .signature{
     font-family: 'tuesdayNight';
-    font-size: 80px;
+    font-size: clamp(7.7rem, 4.17vw, 8.3rem);
     color: #959595;
 }
 
 /* my career */
 .my-career-wrap{
     width: 100%;
-    height: 743px;
+    height: 100vh;
     position: relative;
     display: flex;
     align-items: center;
@@ -365,4 +406,151 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+/* contact */
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+.contact-top .title{
+    font-size: 5rem;
+}
+.contact-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+.contact-item a{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 5rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10rem;
+}
+.copyright{
+    margin: 20rem;
+    color: #5e5e5e;
+    text-align: center;
+}
+.birth, .number, .email{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.birth::before{
+    content: '\e853';
+    display: inline-block;
+    font-family: 'Material Icons';
+    transform: translateY(1px);
+}
+.number::before{
+    content: '\e325';
+    display: inline-block;
+    font-family: 'Material Icons';
+    transform: translateY(1px);
+}
+.email::before{
+    content: '\e0be';
+    display: inline-block;
+    font-family: 'Material Icons';
+    transform: translateY(1px);
+}
+
+@media (max-width: 1280px){
+    /* header */
+    .header{width: 85%;padding-top: 30px;}
+    .logo img{width: 50px !important;}
+    .logo span{font-size: 35px !important;}
+    .logo-wrap > span{font-size: 16px;}
+
+    /* main visual */
+    .main-visual-wrap{max-height: 800px;padding-top: 100px;}
+    .motto-wrap{gap: 20px;}
+    .motto-item span{font-size: 90px;}
+    .motto-item span.point::after{font-size: 35px;}
+    .motto-wrap img{width: 26%;}
+    .desc-items{bottom: 30px;left: 7.5%;}
+
+    /* greeting */
+    img.golf, img.txt{width: 230px;}
+
+    /* contact */
+    .copyright{margin: 15rem;}
+}
+
+@media (max-width: 1024px){
+    /* main visual */
+    .main-wrap{gap: 100px;}
+    .main-visual-wrap{max-height: 500px;padding-top: 80px;}
+    .motto-item span{font-size: 65px;}
+    .motto-item span.point::after{font-size: 25px;}
+    .motto-wrap img{width: 26%;}
+    .desc-items{bottom: 30px;left: 7.5%;gap: 1rem;gap: 1rem;}
+    .desc-item{font-size: 12px;}
+    .birth, .number, .email{gap: 0.5rem;}
+    
+    /* greeting */
+    .greetings{width: 60%;}
+    .inner{width: 35%;}
+    .greet-top img{width: 50px;}
+    .greet-top .title{ font-size: 40px !important;}
+    .greet-bottom .signature{font-size: 7rem;}
+
+    /* my career */
+    .my-career-wrap{height: 50vh;}
+    img.golf, img.txt{width: 160px;}
+    .inner .title{font-size: 6rem;}
+    .inner .title span:first-child::before{width: 4rem;height: 4rem;}
+    .career-item{font-size: 1.8rem;}
+}
+
+@media (max-width: 768px){
+    img.golf, img.txt{width: 120px;}
+    .inner{width: 40%; }
+}
+
+@media (max-width: 425px){
+    .logo-wrap{width: 100%;gap: 0.5rem;flex-direction: row;align-items: center;justify-content: space-between;}
+    .logo{gap: 0.2rem !important;}
+    .logo img{width: 30px !important;}
+    .logo span{font-size: 25px !important;}
+    .main-visual-wrap{max-height: 580px;}
+    .bg-con{display: none;}
+    .h-right{display: none;}
+    .logo-wrap > span{color: #fff;padding: 0.2rem 1rem;border-radius: 0.5rem;border: 1px solid #fff;font-size: 1.2rem;}
+    .motto-wrap{align-items: flex-start; gap: 0;}
+    .motto-item{margin-top: 5rem;}
+    .motto-wrap img{width: 50%;}
+    .motto-item.left{margin-right: -6rem;}
+    .motto-item.left span:nth-child(1){margin-right: 2rem;}
+    .motto-item.right{margin-left: -6rem;}
+    .motto-item.right span:nth-child(1){margin-left: 2rem;}
+    .motto-item span{font-size: 30px;}
+    .motto-item span.point::after{font-size: 1.2rem;}
+    .desc-items{left: 50%;transform: translateX(-50%);padding: 1rem 2rem;background-color: rgba(255, 255, 255, 0.2);border-radius: 100px;}
+    .desc-item{white-space: nowrap;}
+    .greetings{width: 85%;gap: 30px;}
+    .greet-bottom .signature{font-size: 4rem;}
+    .inner{width: 85%;}
+    .inner .title span:first-child::before{left: auto;right: 0;}
+    .copyright{margin: 10rem 0 20rem 0;}
+    .my-career-wrap{height: 100vh;}
+    .inner .title{font-size: 5rem;}
+    
+}
+@media (max-width: 350px){
+    .greet-top .title{font-size: 35px !important;}
+    .career-item{font-size: 1.5rem;}
+    .desc-items{flex-direction: column;border-radius: 1rem; align-items: flex-start;left: 7.5%;transform: translate(0);}
+    .motto-item{margin-top: 3rem;}
 }
